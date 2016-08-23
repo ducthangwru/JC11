@@ -6,6 +6,11 @@ import java.util.List;
 public class StudentManager {
     private List<Student> students = new ArrayList<>();
 
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
     public boolean addStudent(Student student)
     {
         students.add(student);

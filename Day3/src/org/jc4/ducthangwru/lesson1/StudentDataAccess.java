@@ -11,6 +11,8 @@ public class StudentDataAccess {
     private static String address;
     private static int age;
 
+
+
     public static void writeToTextFile(List<Student> listStudents) throws IOException {
 
         FileWriter fileWriter = new FileWriter("dssv.txt");
@@ -59,46 +61,20 @@ public class StudentDataAccess {
     }
 
     public static void writeToBinaryFile(List<Student> listStudents) throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream("dssv.bin");
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-
-        objectOutputStream.writeBytes(listStudents.toString());
-
-        objectOutputStream.close();
-    }
-
-    public static List<Student> readToBinaryFile(String path) {
-        List<Student> listStudents = new ArrayList<>();
-
         try {
-            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(path));
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("dssv.bin"));
 
-            String line;
-            int i = 1;
-            while ((line = objectInputStream.readLine()) != null) {
-                switch (i) {
-                    case 1:
-                        studentId = line.substring(line.indexOf(":") + 1, line.length());
-                        break;
-                    case 2:
-                        name = line.substring(line.indexOf(":") + 1, line.length());
-                        break;
-                    case 3:
-                        age = Integer.parseInt(line.substring(line.indexOf(":") + 1, line.length()));
-                        break;
-                    case 4:
-                        address = line.substring(line.indexOf(":") + 1, line.length());
-                        i = 0;
-                        listStudents.add(new Student(studentId, name, age, address));
-                        break;
-                }
-                i++;
-            }
+            objectOutputStream.writeObject(listStudents);
+            objectOutputStream.close();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    public static List<Student> readToBinaryFile(String path) throws IOException, ClassNotFoundException {
+        ObjectInputStream objectInputStream = new ObjectInputStream(new BufferedInputStream(new FileInputStream(path)));
+        List<Student> listStudents = (List<Student>)objectInputStream.readObject();
         return listStudents;
     }
 }

@@ -1,6 +1,8 @@
 package org.jc4.ducthangwru.lesson1;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable{
     String name;
     int age;
     String studentId;

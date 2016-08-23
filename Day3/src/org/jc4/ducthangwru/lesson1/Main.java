@@ -1,7 +1,10 @@
 package org.jc4.ducthangwru.lesson1;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +15,7 @@ public class Main {
     static String studentId;
     static Scanner input = new Scanner(System.in);
     static StudentManager studentManager = new StudentManager();
-
+    static StudentDataAccess studentDataAccess = new StudentDataAccess();
     public static void main(String[] args) {
         while (true) {
 
@@ -73,6 +76,7 @@ public class Main {
         input.nextLine();
         System.out.println("Nhập mã sinh viên: ");
         studentId = input.nextLine();
+
 
         System.out.println("Nhập họ và tên: ");
         name = input.nextLine();
@@ -171,6 +175,12 @@ public class Main {
     }
 
     public static void readToBinaryFile() {
-        System.out.println(StudentDataAccess.readToBinaryFile("dssv.bin"));
+        try {
+            System.out.println(StudentDataAccess.readToBinaryFile("dssv.bin"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

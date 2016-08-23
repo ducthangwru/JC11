@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b68af4a-df9c-46b4-8d80-4b8cc15aa8c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/thagn.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/Day2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/src/BufferredStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/src/ByteStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/src/CharacterStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/src/CreatNewFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day3/Day3.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day3/src/org/jc4/ducthangwru/lesson1/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day3/src/org/jc4/ducthangwru/lesson1/Student.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day3/src/org/jc4/ducthangwru/lesson1/StudentDataAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day3/src/org/jc4/ducthangwru/lesson1/StudentManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JB11.iws" />
@@ -775,7 +762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1471069340022</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <created>1471965751332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1471965751332</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
